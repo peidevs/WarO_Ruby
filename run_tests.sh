@@ -1,3 +1,6 @@
+
+# use Rake !
+
 clear
 rspec -I lib test/player_stats_spec.rb
 rspec -I lib test/player_spec.rb
