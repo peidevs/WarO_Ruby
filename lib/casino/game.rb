@@ -1,4 +1,8 @@
 
+# Public: This class constitutes one game of WarO. It delegates much work to the Dealer.
+#
+# Examples
+
 require 'casino/dealer'
 require 'domain/table'
 require 'domain/player'

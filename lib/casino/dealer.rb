@@ -2,8 +2,6 @@
 # Public: This class deals out the cards and plays one game.
 #
 # Examples
-#
-#   Dealer.new(40, [p1, p2, p3])
 
 require 'ostruct'
 

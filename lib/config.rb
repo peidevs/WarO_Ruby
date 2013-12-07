@@ -1,4 +1,14 @@
 
+# Public: This class reads # games, # cards, and player definitions by evaluating
+# a data file as a DSL. i.e. it is executed as Ruby code within a context.
+#
+# The context consists of variables for 'num_games', 'num_cards', an empty list of 
+# Player objects, and all strategies available (e.g. NearestCard).
+#
+# Examples
+#
+#   Config.new("config.txt")
+
 class Config
   attr_reader :num_cards, :num_games, :players
   attr_accessor :num_cards, :num_games, :players

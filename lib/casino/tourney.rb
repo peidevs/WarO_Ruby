@@ -1,4 +1,8 @@
 
+# Public: This class constitutes many games of WarO. It delegates each game to Game.
+#
+# Examples
+
 require 'config'
 require 'casino/game'
 require 'domain/player'
