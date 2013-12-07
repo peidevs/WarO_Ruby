@@ -1,0 +1,16 @@
+
+# set num_cards, num_games
+#
+# define a Player with one of these strategies:
+# 	pop_card_strategy 		- select next card from hand
+#   nearest_card_strategy	- select card closest in value to prize card
+#   min_card_strategy       - select minimum card in hand
+#   max_card_strategy       - select maximum card in hand
+
+num_cards = 12
+num_games = 3
+
+# TODO: add new constructor 
+
+players << Player.new("Peter Popper", pop_card_strategy, num_cards, nil)
+players << Player.new("Nearest Ned", nearest_card_strategy, num_cards, nil)
