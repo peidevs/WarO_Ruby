@@ -1,4 +1,8 @@
 
+# Public: Simple holder for a player's tallies.
+#
+# Examples
+
 class PlayerStats
   attr_reader :total, :num_games_won, :num_rounds_won
   attr_accessor :total, :num_games_won, :num_rounds_won

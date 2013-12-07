@@ -1,4 +1,10 @@
 
+# Public: This class presents a player in the game. It uses Bid for, well, bids, and
+# PlayerStats for tracking totals. Crucially, it uses a 'strategy' to select a card
+# from the hand.
+#
+# Examples
+
 require 'domain/bid'
 require 'domain/player_stats'
 

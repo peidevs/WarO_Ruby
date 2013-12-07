@@ -1,4 +1,8 @@
 
+# Public: This class represents the players and the kitty.
+#
+# Examples
+
 class Table
   attr_reader :players, :kitty
   
