@@ -2,7 +2,7 @@ WarO_Ruby
 =========
 
 Usage:
-=========
+---------
 
 Configure "config.txt" with # cards, # games, players. It is a DSL that uses Ruby code
 used for the game.
@@ -10,7 +10,7 @@ used for the game.
 Type: ./run_waro.sh
 
 Rules:
-=========
+---------
 
 Use a deck of N cards with no suits, just natural numbers from 1 to N.
 
@@ -24,7 +24,7 @@ For each round:
 After all rounds, player with most points wins.
 
 Example:
-=========
+---------
 
 Deck is [1,2,3,4,5,6,7,8,9]
 
@@ -42,4 +42,3 @@ Round 3, prize card is 7
 John bids 2, Alice bids 3 -> Alice wins 7 pts
 
 Alice wins (12 pts) over John (6 pts)
-
