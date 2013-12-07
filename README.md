@@ -1,6 +1,8 @@
 WarO_Ruby
 =========
 
+This is a work in progress by a newcomer to Ruby. See 'Issues' for known TODOs.
+
 Usage:
 ---------
 
