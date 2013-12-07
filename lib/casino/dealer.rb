@@ -1,10 +1,16 @@
 
+# Public: This class deals out the cards and plays one game.
+#
+# Examples
+#
+#   Dealer.new(40, [p1, p2, p3])
+
 require 'ostruct'
 
 class Dealer
   def deal(num_cards, players)
-    numPlayers = players.size()
-    hands = deal_hands(num_cards, numPlayers)
+    num_players = players.size()
+    hands = deal_hands(num_cards, num_players)
     
     kitty = hands[0]
     playerHands = hands[1..hands.length]
@@ -26,42 +32,42 @@ class Dealer
   
   def play_round(prize_card, players)
     pair = find_round_winner(prize_card, players)
-    winningBid = pair.winningBid
+    winning_bid = pair.winning_bid
     winner = pair.winner
     winner.player_stats.num_rounds_won = winner.player_stats.num_rounds_won + 1
     winner.player_stats.total = winner.player_stats.total + prize_card
     
-    puts "winner is #{winner.name} with bid #{winningBid} for prize #{prize_card}"
+    puts "winner is #{winner.name} with bid #{winning_bid} for prize #{prize_card}"
     return winner            
   end
   
   def find_round_winner(prize_card, players)
     result = OpenStruct.new()
-    maxBid = 0
+    max_bid = 0
     
     players.each do |player|
       bid = player.get_bid(prize_card)
       
       # TODO: can we remove this if?
-      if bid.offer > maxBid
+      if bid.offer > max_bid
         result.winner = bid.player
-        result.winningBid = bid.offer
-        maxBid = bid.offer
+        result.winning_bid = bid.offer
+        max_bid = bid.offer
       end
     end
     
     return result
   end
   
-  def deal_hands(num_cards, numPlayers)
-    num_cards_in_hand = get_num_cards_in_hand(num_cards, numPlayers)
-    virginDeck = (1..num_cards).to_a
-    shuffledDeck = virginDeck.shuffle
-    hands = shuffledDeck.each_slice(num_cards_in_hand).to_a
+  def deal_hands(num_cards, num_players)
+    num_cards_in_hand = get_num_cards_in_hand(num_cards, num_players)
+    virgin_deck = (1..num_cards).to_a
+    shuffled_deck = virgin_deck.shuffle
+    hands = shuffled_deck.each_slice(num_cards_in_hand).to_a
     return hands
   end
   
-  def get_num_cards_in_hand(num_cards, numPlayers) 
-    return (num_cards / (numPlayers + 1))
+  def get_num_cards_in_hand(num_cards, num_players) 
+    return (num_cards / (num_players + 1))
   end
 end
