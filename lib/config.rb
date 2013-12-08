@@ -22,14 +22,17 @@ class Config
       require 'config'
       require 'domain/player'
       require 'casino/tourney'
+      require 'strategy/console'
       require 'strategy/max_card'
       require 'strategy/min_card'
       require 'strategy/nearest_card'
       require 'strategy/pop_card'
 
-      pop_card_strategy = PopCard.new()
+      console_strategy = Console.new()
+      max_card_strategy = MaxCard.new()
       min_card_strategy = MinCard.new()
       nearest_card_strategy = NearestCard.new()
+      pop_card_strategy = PopCard.new()
 
       players = []      
     }
