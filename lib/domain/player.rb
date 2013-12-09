@@ -12,7 +12,7 @@ class Player
   attr_reader :name, :player_stats, :hand
   attr_accessor :hand
   
-  def initialize(name, strategy, maxCard, hand)
+  def initialize(name, strategy, maxCard, hand = nil)
     @name = name
     @strategy = strategy
     @maxCard = maxCard

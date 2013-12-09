@@ -70,9 +70,9 @@ describe Dealer, "basic usage" do
     dealer = Dealer.new()
     num_cards = 20
     players = []
-    players << Player.new("Bach", nil, num_cards, nil)
-    players << Player.new("Beethoven", nil, num_cards, nil)
-    players << Player.new("Mozart", nil, num_cards, nil)
+    players << Player.new("Bach", nil, num_cards)
+    players << Player.new("Beethoven", nil, num_cards)
+    players << Player.new("Mozart", nil, num_cards)
     table = dealer.deal(num_cards,players)
     table.kitty.length.should == 5
     players.each { |player| player.hand.length.should == 5 }    

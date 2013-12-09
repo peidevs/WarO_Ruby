@@ -9,11 +9,11 @@
 #   pop_card_strategy       - select next card from hand
 
 num_cards = 12
-num_games = 3
+num_games = 1
 
 # TODO: add new constructor 
 
-players << Player.new("Peter Popper", pop_card_strategy, num_cards, nil)
-players << Player.new("You", console_strategy, num_cards, nil)
-# players << Player.new("Nearest Ned", nearest_card_strategy, num_cards, nil)
+players << Player.new("Peter Popper", pop_card_strategy, num_cards)
+players << Player.new("You", console_strategy, num_cards)
+# players << Player.new("Nearest Ned", nearest_card_strategy, num_cards)
 
