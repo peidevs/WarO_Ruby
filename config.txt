@@ -11,8 +11,6 @@
 num_cards = 12
 num_games = 1
 
-# TODO: add new constructor 
-
 players << Player.new("Peter Popper", pop_card_strategy, num_cards)
 players << Player.new("You", console_strategy, num_cards)
 # players << Player.new("Nearest Ned", nearest_card_strategy, num_cards)
