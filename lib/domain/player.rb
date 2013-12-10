@@ -10,9 +10,9 @@ require 'domain/player_stats'
 
 class Player
   attr_reader :name, :player_stats, :hand
-  attr_accessor :hand
+  attr_accessor :max_card, :hand
   
-  def initialize(name, strategy, maxCard, hand = nil)
+  def initialize(name, strategy, maxCard = nil, hand = nil)
     @name = name
     @strategy = strategy
     @maxCard = maxCard
