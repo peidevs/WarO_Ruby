@@ -22,9 +22,8 @@ class Player
   
   def get_bid(prizeCard)
     offer = @strategy.select_card(prizeCard, @hand, @maxCard)
-    bid = Bid.new(offer, self)
     hand.delete(offer)
-    return bid
+    bid = Bid.new(offer, self)
   end
   
   def clear()

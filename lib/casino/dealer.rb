@@ -18,7 +18,6 @@ class Dealer
     end
     
     table = Table.new(players, kitty)
-    return table
   end
 
   def play(table) 
@@ -36,7 +35,7 @@ class Dealer
     winner.player_stats.total = winner.player_stats.total + prize_card
     
     puts "winner is #{winner.name} with bid #{winning_bid} for prize #{prize_card}"
-    return winner            
+    winner            
   end
   
   def find_round_winner(prize_card, players)
@@ -54,7 +53,7 @@ class Dealer
       end
     end
     
-    return result
+    result
   end
   
   def deal_hands(num_cards, num_players)
@@ -62,10 +61,10 @@ class Dealer
     virgin_deck = (1..num_cards).to_a
     shuffled_deck = virgin_deck.shuffle
     hands = shuffled_deck.each_slice(num_cards_in_hand).to_a
-    return hands
+    hands
   end
   
   def get_num_cards_in_hand(num_cards, num_players) 
-    return (num_cards / (num_players + 1))
+    (num_cards / (num_players + 1))
   end
 end
