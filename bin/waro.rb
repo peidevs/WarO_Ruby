@@ -10,8 +10,12 @@
 require 'config'
 require 'casino/tourney'
 
-# TODO: print usage if config file not provided
 config_dsl_file = ARGV[0]
-config = Config.new(config_dsl_file)
-tourney = Tourney.new(config)
-tourney.play_games()
+
+if (config_dsl_file != nil)
+  config = Config.new(config_dsl_file)
+  tourney = Tourney.new(config)
+  tourney.play_games()
+else
+  puts "Usage: ruby -I lib bin/waro.rb config.txt"
+end
