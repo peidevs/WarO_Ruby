@@ -1,7 +1,7 @@
 
 desc "run RSpec tests"
 task :run_tests do
-  system("rspec test/")
+  system("rspec ")
 end
 
 desc "run WarO"
