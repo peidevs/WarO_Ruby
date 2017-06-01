@@ -1,7 +1,7 @@
 WarO_Ruby
 =========
 
-This is a work in progress by a newcomer to Ruby. See 'Issues' for known TODOs.
+The War-O [code kata](https://en.wikipedia.org/wiki/Kata_(programming)). This is a work in progress by a newcomer to Ruby. See 'Issues' for known TODOs.
 
 Usage:
 ---------
